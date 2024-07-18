@@ -1,6 +1,6 @@
 .moon {
-    width: 50em;
-    height: 50em;
+    width: 25em;
+    height: 25em;
     background: url(./images/moon-full.jpg);
     background-size: cover;
     border-radius: 50%;
@@ -8,6 +8,9 @@
     position: relative;
     margin: auto;
     animation: rotate 10s linear infinite; 
+    margin-top:20%;
+
+   
 }
 
 @keyframes rotate {
