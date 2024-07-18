@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Scroll Animation For Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+  speed="600" parallax="true" pagination="true" pagination-clickable="true" navigation="true">
+  <div slot="container-start" class="parallax-bg"
+  data-swiper-parallax="-23%"></div>
+  
+  <swiper-slide style="background: #111;">
+      <div id="particles-js">
+      <span class="moon">
+      </span>
+    </div>
+    </swiper-slide>
+
+
+    <swiper-slide>
+
+      <div id="earth"></div>
+
+    </swiper-slide>
+
+    <swiper-slide>
+      <div id="mars"></div>
+    </swiper-slide>
+
+  </swiper-container>
+
+<script src="particles.js"></script>
+<script src="app.js"></script>
+<script src="mars.js"></script>
+<script src="earth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>
