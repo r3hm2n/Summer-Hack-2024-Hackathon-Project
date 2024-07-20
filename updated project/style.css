@@ -85,7 +85,7 @@ swiper-slide .text {
     left: 42%;
     width: 200px;
     height: 200px;
-    background: url(./images/moon-full.jpg);
+    background: url(/images/moon-full.jpg);
     background-size: cover;
     border-radius: 50%;
     box-shadow: inset -2em -2em 2em #000, -0.5em -0.5em 1em #8a8484ab;

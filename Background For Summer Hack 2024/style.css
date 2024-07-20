@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+ 
 }
 
 
@@ -18,4 +19,26 @@ html, body{
 #particles-js{
     width: 100%;
     height: 100%;
+}
+/* the planet  */
+.moon {
+    width: 25em;
+    height: 25em;
+    background: url(/images/moon-full.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: inset -2em -2em 2em #000, -0.5em -0.5em 1em #8a8484ab;
+    position: relative;
+    margin: auto;
+    animation: rotate 10s linear infinite; 
+    margin-top: 20%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
