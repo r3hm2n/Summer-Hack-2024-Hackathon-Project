@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Scroll Animation For Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <link rel=stylesheet href="home.css">
+</head>
+
+<body oncontextmenu="return false;">
+  <!-- Loading Animation -->
+  <div class="loader" style="display: flex; align-items: center; justify-self: center; flex-direction: column;">
+    <div class="planet"></div>
+    <div>
+      <h4>Loading</h4>
+      <div class="dots">
+        <span class="dot z"></span>
+        <span class="dot f"></span>
+        <span class="dot s"></span>
+        <span class="dot t"></span>
+        <span class="dot l"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper container -->
+  <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+    speed="600" parallax="true" pagination="true" pagination-clickable="true" navigation="true">
+    <swiper-slide>
+      <div id="particles-js">
+        <div class="content">
+          <div class="container">
+            <div class="sun">
+              <img src="./images/sun.png" alt="sun">
+            </div>
+            <div class="mercury"></div>
+            <div class="venus"></div>
+            <div class="earth">
+            </div>
+            <div class="mars"></div>
+            <div class="jupiter"></div>
+            <div class="saturn"></div>
+            <div class="uranus"></div>
+            <div class="neptune"></div>
+            <div class="pluto">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function createStars() {
+          const container = document.querySelector("body");
+          for (let i = 0; i < 1000; i++) {
+            // Increase the number of stars to 1000
+            const star = document.createElement("div");
+            star.className = "star";
+            star.style.width = ".1px";
+            star.style.height = ".1px";
+            star.style.top = Math.random() * 100 + "%";
+            star.style.left = Math.random() * 100 + "%";
+            container.appendChild(star);
+          }
+        }
+        createStars();
+
+      </script>
+</body>
+</swiper-slide>
+<swiper-slide>
+  <div id="mercury"
+    style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+      src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="main-image">
+    <h1 style="position: absolute; top:220px;">Mercury</h1>
+    <h4 style="position: absolute; top:260px;">A Terrestrial Planet</h4>
+    <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+      src="https://img.icons8.com/ios/50/ffffff/earth-planet.png" alt="idk fck off">
+    <h4 style="position: absolute; top:380px;">Description</h4>
+    <p style="position: absolute; top:450px;">Mercury is the smallest planet in our solar system and nearest to the Sun,
+      Mercury is only slightly larger than
+      Earth's Moon. It is the closest planet to the Sun. Mercury is a rocky planet, also known as a terrestrial
+      planet. Mercury has a solid, cratered surface, much like the Earth's moon.</p>
+    <br><br><br><br>
+    <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+      <p style="position: absolute; top:550px;"><span style="font-size: 16px; font-weight: 900;">distanceFromSun:</span>
+        36 million miles</p>
+      <br>
+      <p style="position: absolute; top:590px;"><span style="font-size: 16px; font-weight: 900;">yearLength:</span> 88
+      </p>
+      <br>
+      <p style="position: absolute; top:630px;"><span style="font-size: 16px; font-weight: 900;">numberOfMoons:</span> 0
+      </p>
+      <br>
+      <p style="position: absolute; top:670px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span> ROMAN
+        GOD OF SPEED</p>
+      <b></b>
+      <p style="position: absolute; top:710px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> None</p>
+    </span>
+
+  </div>
+</swiper-slide>
+<swiper-slide>
+  <div id="venus"
+    style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+      src="https://upload.wikimedia.org/wikipedia/commons/0/08/Venus_from_Mariner_10.jpg" alt="main-image">
+    <h1 style="position: absolute; top:220px;">Venus</h1>
+    <h4 style="position: absolute; top:260px;">A Terrestrial Planet</h4>
+    <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+      src="https://img.icons8.com/ios/50/ffffff/earth-planet.png" alt="idk fck off">
+    <h4 style="position: absolute; top:380px;">Description</h4>
+    <p style="position: absolute; top:450px;">Venus is the second planet from the Sun and is Earth’s closest planetary
+      neighbor. It’s one of the four inner, terrestrial (or rocky) planets, and it’s often called Earth’s twin because
+      it’s similar in size and density. Venus rotates on its axis backward, compared to most of the other planets in the
+      solar system. Venus was the first planet to be explored by a spacecraft. Venus has a solid surface covered in
+      dome-like volcanoes, rifts, and mountains, with expansive volcanic plains and vast, ridged plateaus.</p>
+    <br><br><br><br>
+    <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+      <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromSun:</span>
+        67 million miles</p>
+      <br>
+      <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">yearLength:</span> 88
+      </p>
+      <br>
+      <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">numberOfMoons:</span> 0
+      </p>
+      <br>
+      <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span> ROMAN
+        GODDESS OF LOVE</p>
+      <b></b>
+      <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> None</p>
+    </span>
+
+  </div>
+</swiper-slide>
+<swiper-slide>
+  <div id="earth"
+    style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1200px-The_Earth_seen_from_Apollo_17.jpg"
+      alt="main-image">
+    <h1 style="position: absolute; top:220px;">Earth</h1>
+    <h4 style="position: absolute; top:260px;">A Terrestrial Planet</h4>
+    <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+      src="https://img.icons8.com/ios/50/ffffff/earth-planet.png" alt="idk fck off">
+    <h4 style="position: absolute; top:380px;">Description</h4>
+    <p style="position: absolute; top:450px;">Our home planet Earth is a rocky, terrestrial planet. It has a solid and
+      active surface with mountains, valleys, canyons, plains and so much more. Earth is special because it is an ocean
+      planet. Water covers 70 percent of Earth's surface. Earth's atmosphere is made mostly of nitrogen and has plenty
+      of oxygen for us to breathe. The atmosphere also protects us from incoming meteoroids, most of which break up
+      before they can hit the surface.</p>
+    <br><br><br><br>
+    <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+      <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromSun:</span>
+        93 million miles</p>
+      <br>
+      <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">yearLength:</span> 365
+      </p>
+      <br>
+      <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">numberOfMoons:</span> 1
+      </p>
+      <br>
+      <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span>
+        VARIATION OF 'THE GROUNDED' IN MANY LANGUAGES</p>
+      <b></b>
+      <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> None</p>
+    </span>
+
+  </div>
+</swiper-slide>
+<swiper-slide>
+  <div id="mars"
+    style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+      src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="main-image">
+    <h1 style="position: absolute; top:220px;">Mars</h1>
+    <h4 style="position: absolute; top:260px;">A Terrestrial Planet</h4>
+    <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+      src="https://img.icons8.com/ios/50/ffffff/earth-planet.png" alt="idk fck off">
+    <h4 style="position: absolute; top:380px;">Description</h4>
+    <p style="position: absolute; top:450px;">Mars is a cold desert world. It is half the size of Earth. Mars is
+      sometimes called the Red Planet. It's red because of rusty iron in the ground. Like Earth, Mars has seasons, polar
+      ice caps, volcanoes, canyons, and weather. It has a very thin atmosphere made of carbon dioxide, nitrogen, and
+      argon. There are signs of ancient floods on Mars, but now water mostly exists in icy dirt and thin clouds. On some
+      Martian hillsides, there is evidence of liquid salty water in the ground.</p>
+    <br><br><br><br>
+    <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+      <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromSun:</span>
+        142 million miles</p>
+      <br>
+      <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">yearLength:</span> 678
+      </p>
+      <br>
+      <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">numberOfMoons:</span> 2
+      </p>
+      <br>
+      <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span>ROMAN GOD OF WAR</p>
+      <b></b>
+      <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> None</p>
+    </span>
+
+  </div>
+</swiper-slide>
+<swiper-slide>
+  <div id="jupitar"
+  style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+    src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg" alt="main-image">
+  <h1 style="position: absolute; top:220px;">Jupitar</h1>
+  <h4 style="position: absolute; top:260px;">A Gas Giant</h4>
+  <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+    src="https://img.icons8.com/ios-glyphs/30/ffffff/planet.png" alt="idk fck off">
+  <h4 style="position: absolute; top:380px;">Description</h4>
+  <p style="position: absolute; top:450px;">Jupiter is the biggest planet in our solar system. It's similar to a star, but it never got big enough to start burning. Jupiter is covered in swirling cloud stripes. It has big storms like the Great Red Spot, which has been going for hundreds of years. Jupiter is a gas giant and doesn't have a solid surface, but it may have a solid inner core about the size of Earth. Jupiter also has rings, but they're too faint to see very well.</p>
+  <br><br><br><br>
+  <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+    <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromSun:</span>
+      484 million miles</p>
+    <br>
+    <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">yearLength:</span> 4,333
+    </p>
+    <br>
+    <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">numberOfMoons:</span> 75
+    </p>
+    <br>
+    <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span>KING OF THE ROMAN GODS</p>
+    <b></b>
+    <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> None</p>
+  </span>
+
+</div>
+</swiper-slide>
+<swiper-slide>
+  <div id="saturn"
+    style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+      src="https://solarsystem.nasa.gov/system/stellar_items/image_files/38_saturn_1600x900.jpg" alt="main-image">
+    <h1 style="position: absolute; top:220px;">Saturn</h1>
+    <h4 style="position: absolute; top:260px;">A Gas Giant</h4>
+    <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+      src="https://img.icons8.com/ios-glyphs/30/ffffff/planet.png" alt="idk fck off">
+    <h4 style="position: absolute; top:380px;">Description</h4>
+    <p style="position: absolute; top:450px;">Saturn is the sixth planet from the Sun and the second largest planet in our solar system. Saturn is a gas-giant planet and therefore does not have a solid surface like Earth’s. Saturn has the most spectacular ring system, with seven rings and several gaps and divisions between them. Like Jupiter, Saturn is mostly a ball of hydrogen and helium.</p>
+    <br><br><br><br>
+    <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+      <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromSun:</span>
+        886 million miles</p>
+      <br>
+      <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">yearLength:</span> 10,759
+      </p>
+      <br>
+      <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">numberOfMoons:</span> 82
+      </p>
+      <br>
+      <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span>FATHER OF JUPITAR</p>
+      <b></b>
+      <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> 8 Main rings</p>
+    </span>
+
+  </div>
+</swiper-slide>
+<swiper-slide>
+  <div id="uranus"
+  style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+    src="https://solarsystem.nasa.gov/system/stellar_items/image_files/38_saturn_1600x900.jpg" alt="main-image">
+  <h1 style="position: absolute; top:220px;">Uranus</h1>
+  <h4 style="position: absolute; top:260px;">A ICE GIANT</h4>
+  <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+    src="https://img.icons8.com/ios-glyphs/30/ffffff/snowflake.png" alt="idk fck off">
+  <h4 style="position: absolute; top:380px;">Description</h4>
+  <p style="position: absolute; top:450px;">Uranus is made of water, methane, and ammonia fluids above a small rocky center. Its atmosphere is made of hydrogen and helium like Jupiter and Saturn, but it also has methane. The methane makes Uranus blue. Uranus also has faint rings. The inner rings are narrow and dark. The outer rings are brightly colored and easier to see. Like Venus, Uranus rotates in the opposite direction as most other planets. And unlike any other planet, Uranus rotates on its side.</p>
+  <br><br><br><br>
+  <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+    <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromSun:</span>
+      1.8 billion miles</p>
+    <br>
+    <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">yearLength:</span> 30,687
+    </p>
+    <br>
+    <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">numberOfMoons:</span> 27
+    </p>
+    <br>
+    <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span>GREEK GOD OF THE SKY</p>
+    <b></b>
+    <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> None</p>
+  </span>
+
+</div>
+</swiper-slide>
+<swiper-slide>
+  <div id="neptune"
+  style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+    src="https://cdn.mos.cms.futurecdn.net/eNTJrysq4A6DqXncBtsRrB.jpg" alt="main-image">
+  <h1 style="position: absolute; top:220px;">Neptune</h1>
+  <h4 style="position: absolute; top:260px;">A ICE GIANT</h4>
+  <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+    src="https://img.icons8.com/ios-glyphs/30/ffffff/snowflake.png" alt="idk fck off">
+  <h4 style="position: absolute; top:380px;">Description</h4>
+  <p style="position: absolute; top:450px;">Neptune is dark, cold, and very windy. It's the last of the planets in our solar system. It's more than 30 times as far from the Sun as Earth is. Neptune is very similar to Uranus. It's made of a thick soup of water, ammonia, and methane over an Earth-sized solid center. Its atmosphere is made of hydrogen, helium, and methane. The methane gives Neptune the same blue color as Uranus. Neptune has six rings, but they're very hard to see.</p>
+  <br><br><br><br>
+  <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+    <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromSun:</span>
+      2.8 billion miles</p>
+    <br>
+    <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">yearLength:</span> 60,190
+    </p>
+    <br>
+    <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">numberOfMoons:</span> 14
+    </p>
+    <br>
+    <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span>ROMAN GOD OF THE SEA</p>
+    <b></b>
+    <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> None</p>
+  </span>
+
+</div>
+</swiper-slide>
+<swiper-slide>
+  <div id="sun"
+  style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/640px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg" alt="main-image">
+  <h1 style="position: absolute; top:220px;">Sun</h1>
+  <h4 style="position: absolute; top:260px;">A Star</h4>
+  <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+    src="https://img.icons8.com/ios-filled/50/ffffff/sun--v1.png" alt="idk fck off">
+  <h4 style="position: absolute; top:380px;">Description</h4>
+  <p style="position: absolute; top:450px;">The Sun is the star at the center of our solar system. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. The Sun is by far the most important source of energy for life on Earth. It is a G-type main-sequence star that comprises about 99.86% of the mass of the entire Solar System.</p>
+  <br><br><br><br>
+  <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+    <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromEarth:</span>
+      93 million miles</p>
+    <br>
+    <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">Mass: </span> 333,000 Earths
+    </p>
+    <br>
+    <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">Diameter:</span> 864,340 miles
+    </p>
+    <br>
+    <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span>THE SUN</p>
+    <b></b>
+    <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> FLAME RINGS</p>
+  </span>
+
+</div>
+</swiper-slide>
+<swiper-slide>
+  <div id="moon"
+  style=" position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <img style="width: 150px; top:1px; height: 150px; position: absolute;"
+    src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" alt="main-image">
+  <h1 style="position: absolute; top:220px;">MOON</h1>
+  <h4 style="position: absolute; top:260px;">A Natural Satellite</h4>
+  <img style="width: 50px; position: absolute; height: 50px; left:5%; top:120px;"
+    src="https://img.icons8.com/ios-filled/50/ffffff/rock.png" alt="idk fck off">
+  <h4 style="position: absolute; top:380px;">Description</h4>
+  <p style="position: absolute; top:450px;">The Moon is Earth's only natural satellite and the fifth largest moon in the Solar System. It is the largest natural satellite in relation to its primary planet, with a diameter about one-quarter of Earth's. The Moon is a rocky body that does not have an atmosphere, and it has phases that change over the course of a month. It affects tides on Earth due to its gravitational pull.</p>
+  <br><br><br><br>
+  <span style="margin-right: 1040px; display: flex; flex-direction: row; ">
+    <p style="position: absolute; top:580px;"><span style="font-size: 16px; font-weight: 900;">distanceFromEarth:</span>
+      238,855 miles</p>
+    <br>
+    <p style="position: absolute; top:620px;"><span style="font-size: 16px; font-weight: 900;">Dimeter:</span> 2,159 miles
+    </p>
+    <br>
+    <p style="position: absolute; top:660px;"><span style="font-size: 16px; font-weight: 900;">Mass:</span> 0.0123 Earths
+    </p>
+    <br>
+    <p style="position: absolute; top:700px;"><span style="font-size: 16px; font-weight: 900;">namesake:</span>THE MOON</p>
+    <b></b>
+    <p style="position: absolute; top:740px;"><span style="font-size: 16px; font-weight: 900;">rings:</span> None</p>
+  </span>
+
+</div>
+</swiper-slide>
+<div slot="container-start" class="parallax-bg" data-swiper-parallax="-23%"></div>
+</swiper-container>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+<script src="particles.js"></script>
+<script src="app.js"></script>
+<script src="mars.js"></script>
+<script src="moon.js"></script>
+<script src="neptune.js"></script>
+<script src="uranus.js"></script>
+<script src="mercury.js"></script>
+<script src="venus.js"></script>
+<script src="jupitar.js"></script>
+<script src="sun.js"></script>
+<script src="saturn.js"></script>
+<script src="earth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('./Planet.json')
+      .then(response => response.json())
+      .then(data => {
+        const swiperContainer = document.querySelector('.mySwiper');
+
+        data.forEach(planet => {
+          const swiperSlide = document.createElement('swiper-slide');
+          swiperSlide.innerHTML = `
+              <div id="${planet.name.toLowerCase()}">
+                <img src="${planet.picture}" alt="${planet.name}" class="image" width="200px" height="200px" >
+                <h2 color="">${planet.name}</h2>
+                <p>${planet.tagline}</p>
+                <img src="${planet.tagline_icon}" alt="Tagline Icon">
+                <p>${planet.description}</p>
+                <p>Distance from Sun: ${planet.distanceFromSun}</p>
+                <p>Year Length: ${planet.yearLength} Earth days</p>
+                <p>Number of Moons: ${planet.numberOfMoons}</p>
+                <p>Namesake: ${planet.namesake}</p>
+                <p>${planet.rings.url_exists ? 'Has Rings' : 'No Rings'}</p>
+              </div>
+            `;
+          swiperContainer.appendChild(swiperSlide);
+        });
+      });
+  });
+</script>
+</body>
+
+</html>
