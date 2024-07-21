@@ -39,7 +39,9 @@ body {
   }
   
   
-  
+  .image{
+      border-radius: 55%;
+  }
   
   
   .planet {
@@ -227,7 +229,10 @@ body {
   }
 
 
-
+.moon{
+  background: url(./images/moon.png);
+  background-size: cover;
+}
 
 
 

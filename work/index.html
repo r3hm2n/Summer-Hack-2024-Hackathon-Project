@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <title>Scroll Animation For Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="style.css">
+  <link rel=stylesheet href="home.css">
 </head>
-
 <body>
-
   <!-- Loading Animation -->
-
-
   <div class="loader" style="display: flex; align-items: center; justify-self: center; flex-direction: column;">
     <div class="planet"></div>
     <div>
@@ -25,65 +21,54 @@
         <span class="dot l"></span>
       </div>
     </div>
-
   </div>
 
-
-
-
-
-  <!-- website code -->
+  <!-- Swiper container -->
   <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
     speed="600" parallax="true" pagination="true" pagination-clickable="true" navigation="true">
+    <swiper-slide>
+     <div class="content">
+        <div class="container">
+          <div class="sun">
+            <img src="./images/sun.png" alt="sun">
+          </div>
+          <div class="mercury"></div>
+          <div class="venus"></div>
+          <div class="earth">
+            <div class="moon"></div>
+          </div>
+          <div class="mars"></div>
+          <div class="jupiter"></div>
+          <div class="saturn"></div>
+          <div class="uranus"></div>
+          <div class="neptune"></div>
+          <div class="pluto">
+          </div>
+        </div>
+        </div>
+        <script>
+          function createStars() {
+        const container = document.querySelector("body");
+        for (let i = 0; i < 1000; i++) {
+          // Increase the number of stars to 1000
+          const star = document.createElement("div");
+          star.className = "star";
+          star.style.width = ".1px";
+          star.style.height = ".1px";
+          star.style.top = Math.random() * 100 + "%";
+          star.style.left = Math.random() * 100 + "%";
+          container.appendChild(star);
+        }
+      }
+      createStars();
+      
+        </script>
+      </body>
+    </swiper-slide>
     <div slot="container-start" class="parallax-bg" data-swiper-parallax="-23%"></div>
-
-
-    <swiper-slide>
-      <div style="display: flex; flex-direction: column;" id="particles-js">
-
-        <span class="moon one" style="left: 15%; top: 36%; height: 220px; width: 220px;"></span>
-        <span class="earth one" style="left: 40%; top: 30%; height: 300px; width: 300px;"></span>
-        <span class="mars one" style="left: 70%; top: 30%; height: 300px; width: 300px;"></span>
-      </div>
-
-    </swiper-slide>
-
-
-    <swiper-slide>
-      <div id="moon">
-        <span class="moon">
-        </span>
-        <button class="btn-moon">Lets Fly!</button>
-
-      </div>
-
-    </swiper-slide>
-
-    </swiper-slide>
-    <swiper-slide>
-      <div id="earth">
-        <span class="earth">
-        </span>
-        <button class="btn-earth">Lets Fly!</button>
-
-      </div>
-
-    </swiper-slide>
-    <swiper-slide>
-      <div id="mars">
-        <span class="mars">
-        </span>
-        <button class="btn-mars">Lets Fly!</button>
-
-      </div>
-
-    </swiper-slide>
-
-
   </swiper-container>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>
   <script src="particles.js"></script>
   <script src="app.js"></script>
@@ -91,6 +76,33 @@
   <script src="moon.js"></script>
   <script src="earth.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-</body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('./Planet.json')
+        .then(response => response.json())
+        .then(data => {
+          const swiperContainer = document.querySelector('.mySwiper');
 
+          data.forEach(planet => {
+            const swiperSlide = document.createElement('swiper-slide');
+            swiperSlide.innerHTML = `
+              <div id="${planet.name.toLowerCase()}">
+                <img src="${planet.picture}" alt="${planet.name}" class="image" width="200px" height="200px" >
+                <h2 color="">${planet.name}</h2>
+                <p>${planet.tagline}</p>
+                <img src="${planet.tagline_icon}" alt="Tagline Icon">
+                <p>${planet.description}</p>
+                <p>Distance from Sun: ${planet.distanceFromSun}</p>
+                <p>Year Length: ${planet.yearLength} Earth days</p>
+                <p>Number of Moons: ${planet.numberOfMoons}</p>
+                <p>Namesake: ${planet.namesake}</p>
+                <p>${planet.rings.url_exists ? 'Has Rings' : 'No Rings'}</p>
+              </div>
+            `;
+            swiperContainer.appendChild(swiperSlide);
+          });
+        });
+    });
+  </script>
+</body>
 </html>
